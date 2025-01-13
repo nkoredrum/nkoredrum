@@ -1,5 +1,5 @@
 /* General Reset */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,14 +16,14 @@ body {
 
 /* Header Styling */
 header {
-    text-align: center;
     background: #333;
     color: white;
     padding: 20px 0;
+    text-align: center;
 }
 
 header .logo {
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 10px;
 }
 
@@ -33,11 +33,10 @@ header h1 {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
     background-color: #444;
+    padding: 10px 0;
 }
 
 nav ul li {
@@ -62,6 +61,7 @@ nav ul li a:hover {
     text-align: center;
     background: #f4f4f4;
     padding: 50px 20px;
+    margin-bottom: 20px;
 }
 
 /* Featured Stories Section */
@@ -106,27 +106,125 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* About Section */
-.about-section {
+/* Testimonials Section */
+.testimonials {
     text-align: center;
-    padding: 20px;
     background: #eaeaea;
-}
-
-/* Contact Section */
-.contact-section {
-    text-align: center;
     padding: 20px;
-    background: #f4f4f4;
+    font-style: italic;
 }
 
-.contact-section a {
+.testimonials blockquote {
+    margin: 10px auto;
+    max-width: 800px;
+    font-size: 1.2rem;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.upcoming-events ul {
+    list-style: none;
+}
+
+.upcoming-events ul li {
+    margin: 10px 0;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+}
+
+.newsletter-signup form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.newsletter-signup input[type=\"email\"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-signup button:hover {
+    background: #e68900;
+}
+
+/* Popular Articles */
+.popular-articles ul {
+    list-style: none;
+    text-align: center;
+}
+
+.popular-articles ul li {
+    margin: 5px 0;
+}
+
+.popular-articles ul li a {
     color: #ff9800;
     text-decoration: none;
 }
 
-.contact-section a:hover {
+.popular-articles ul li a:hover {
     text-decoration: underline;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.photo-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.photo-gallery .gallery-grid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+    background: #ff9800;
+    color: white;
+}
+
+.call-to-action .cta-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #e68900;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.call-to-action .cta-button:hover {
+    background: #d07800;
 }
 
 /* Footer Styling */
