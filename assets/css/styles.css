@@ -7,36 +7,36 @@ body, h1, h2, h3, p, ul, li, a {
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     margin: 0;
 }
 
 /* Header Styling */
 header {
-    background: #333;
+    background: linear-gradient(90deg, #4e4376, #2b5876);
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 10px;
 }
 
 header .logo {
-    max-width: 120px;
-    margin-bottom: 10px;
+    max-width: 100px;
 }
 
 header h1 {
     font-size: 2.5rem;
+    margin: 10px 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #444;
     padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 nav ul li {
@@ -48,20 +48,30 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #ff9800;
+    transform: scale(1.1);
     border-radius: 5px;
 }
 
 /* Welcome Section */
 .welcome-section {
     text-align: center;
-    background: #f4f4f4;
+    background: linear-gradient(120deg, #ff9800, #ffc107);
     padding: 50px 20px;
-    margin-bottom: 20px;
+    color: white;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+}
+
+.welcome-section p {
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 /* Featured Stories Section */
@@ -79,7 +89,7 @@ nav ul li a:hover {
 
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -88,7 +98,12 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .story-card img {
@@ -97,150 +112,76 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
-.story-card h4 {
+.story-card h4, .story-card p {
     margin: 15px;
 }
 
-.story-card p {
-    margin: 15px;
-    color: #555;
+/* Add Subtle Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Testimonials Section */
-.testimonials {
+.stories-grid, .testimonials, .upcoming-events, .newsletter-signup, .popular-articles, .photo-gallery {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Other Sections */
+.testimonials, .upcoming-events, .newsletter-signup, .popular-articles, .photo-gallery, .call-to-action {
     text-align: center;
-    background: #eaeaea;
     padding: 20px;
-    font-style: italic;
+    margin: 20px auto;
+    background: #f0f0f0;
+    border-radius: 10px;
 }
 
 .testimonials blockquote {
+    font-style: italic;
     margin: 10px auto;
     max-width: 800px;
-    font-size: 1.2rem;
 }
 
-/* Upcoming Events */
-.upcoming-events {
-    padding: 20px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.upcoming-events ul {
-    list-style: none;
-}
-
-.upcoming-events ul li {
-    margin: 10px 0;
-}
-
-/* Newsletter Signup */
-.newsletter-signup {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-}
-
-.newsletter-signup form {
+.newsletter-signup form input, .newsletter-signup form button {
+    margin-top: 15px;
     display: inline-block;
-    margin-top: 10px;
 }
 
-.newsletter-signup input[type=\"email\"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.newsletter-signup button {
-    padding: 10px 20px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.newsletter-signup button:hover {
-    background: #e68900;
-}
-
-/* Popular Articles */
-.popular-articles ul {
-    list-style: none;
-    text-align: center;
-}
-
-.popular-articles ul li {
-    margin: 5px 0;
-}
-
-.popular-articles ul li a {
-    color: #ff9800;
-    text-decoration: none;
-}
-
-.popular-articles ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Photo Gallery */
-.photo-gallery {
-    text-align: center;
-    padding: 20px;
-}
-
-.photo-gallery .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.photo-gallery .gallery-grid img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* Call to Action */
 .call-to-action {
-    text-align: center;
-    padding: 20px;
-    background: #ff9800;
+    background: #4e4376;
     color: white;
+    padding: 30px;
+    margin: 20px 10px;
+    border-radius: 5px;
 }
 
 .call-to-action .cta-button {
+    background: #ff9800;
     color: white;
-    text-decoration: none;
     padding: 10px 20px;
-    background: #e68900;
+    text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .call-to-action .cta-button:hover {
-    background: #d07800;
+    background: #e68900;
+    transform: scale(1.1);
 }
 
 /* Footer Styling */
 footer {
-    text-align: center;
     background: #333;
     color: white;
+    text-align: center;
     padding: 10px 0;
 }
 
-.footer-links a {
+footer a {
     color: #ff9800;
     text-decoration: none;
     margin: 0 10px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
 }
