@@ -7,35 +7,53 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-color: #f8f8f8; /* Background color for the header */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
 }
 
-.logo-container img {
-    width: 80px;
-    margin-bottom: 10px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Adjust as needed for your logo size */
+    margin-right: 10px; /* Space between the logo and the title */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    padding: 0;
     list-style: none;
     margin: 0;
-    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #333;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #007bff; /* Highlight color on hover */
 }
 
 main {
