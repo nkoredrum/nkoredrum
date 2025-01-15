@@ -154,7 +154,7 @@ footer a {
     display: inline-block;
     margin: 10px 0 20px;
     padding: 8px 16px;
-    background-color: #3e8e41; /* Use a color from your branding */
+    background-color: #3e8e41; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -163,4 +163,23 @@ footer a {
 
 .read-more:hover {
     background-color: #2e7030; /* Slightly darker shade for hover */
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    gap: 15px; 
+    padding: 10px; 
+}
+
+.gallery-grid img {
+    width: 100%; /* Makes the image fit its container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
