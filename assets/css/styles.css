@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto',sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -55,7 +55,16 @@ nav ul li a {
 nav ul li a:hover {
     color: #007bff; /* Highlight color on hover */
 }
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
 
+nav a:hover {
+    color: #007BFF;
+}
 main {
     padding: 20px;
 }
@@ -200,4 +209,19 @@ footer a {
 .gallery-grid img:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
 }
