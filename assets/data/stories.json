@@ -1,0 +1,15 @@
+[
+    {
+      "title": "The Majesty of Ankole Cattle",
+      "excerpt": "Known for their grand horns and resilience, Ankole cattle are more than livestock—they’re a living symbol of pride and tradition.",
+      "image": "assets/images/ankolecattle.jpeg",
+      "url": "blog/ankole-cattle.html"
+    },
+    {
+      "title": "The Mbarara Marathon: A Cultural Celebration",
+      "excerpt": "An in-depth look at the marathon that brings the community together.",
+      "image": "assets/images/mbararamarathon.jpg",
+      "url": "blog/mbarara-marathon.html"
+    }
+  ]
+  

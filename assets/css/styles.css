@@ -1,227 +1,187 @@
-/* General Styles */
+/* ====================
+   Import Component CSS Files
+==================== */
+@import url('header.css');
+@import url('footer.css');
+@import url('form.css');
+@import url('responsive.css');
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Questrial", sans-serif;
+  --nav-font: "Noto Sans", sans-serif;
+}
+/* ====================
+   Global Styles
+==================== */
 body {
-    font-family: 'Roboto',sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+
+    font-family: var(--default-font);
+  
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #B68D40;
+
+  color:black;
+  overflow-x: hidden;
 }
 
-header {
-    background-color: #f8f8f8; /* Background color for the header */
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px; /* Adjust as needed for your logo size */
-    margin-right: 10px; /* Space between the logo and the title */
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #333;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #007bff; /* Highlight color on hover */
-}
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #007BFF;
-}
+/* ====================
+   Section & Animation Styles
+==================== */
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
-/* Section Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .section {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-bottom: 40px;
 }
 
-/* Section-Specific Styles */
-.featured-stories .stories-grid {
-    display: flex;
-    gap: 20px;
+/* ====================
+   Layout: Container, Main Content & Sidebar
+==================== */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.story-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+.main-content {
+  flex: 2;
+  min-width: 300px;
 }
 
-.testimonials blockquote {
-    font-style: italic;
-    color: #555;
-    margin: 10px 0;
-    padding-left: 10px;
-    border-left: 4px solid #ddd;
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-.newsletter-signup form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-button, .cta-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, .cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #007BFF;
-    text-decoration: none;
-}
+/* ====================
+   Featured Stories & Story Cards
+==================== */
 .stories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
 }
 
 .story-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 4px black;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .story-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.story-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ensures the image covers the space without distortion */
-    display: block;
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .story-card h4 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
 .story-card p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0 10px 20px;
+  font-size: 1rem;
+  color: #666;
+  margin: 0 10px 20px;
 }
 
 .read-more {
-    display: inline-block;
-    margin: 10px 0 20px;
-    padding: 8px 16px;
-    background-color: #3e8e41; 
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: block;
+  margin: 10px 0 20px;
+  padding: 8px 16px;
+  background-color:black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .read-more:hover {
-    background-color: #2e7030; /* Slightly darker shade for hover */
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
+
+/* ====================
+   Gallery Grid
+==================== */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
-    gap: 15px; 
-    padding: 10px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
 }
 
 .gallery-grid img {
-    width: 100%; /* Makes the image fit its container */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 8px; /* Optional: Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-.hero {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* ====================
+   Responsive Styles
+==================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
 }
-
-.hero p {
-    font-size: 1.2rem;
-    color: #666;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
 }

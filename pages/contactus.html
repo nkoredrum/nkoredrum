@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch-ND</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nkore Drum - Bringing untold stories of Western Uganda to life.">
+    <meta property="og:title" content="Nkore Drum">
+    <meta property="og:description" content="Exploring the rich culture and traditions of the Nkore people.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:url" content="http://yourwebsite.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+  
+    
+    <!-- Google Fonts with Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo & Title Section -->
+        <div class="logo-title">
+          <a href="index.html" class="logo-link">
+            <img src="assets/images/logo.jpg" alt="Nkore Drum Logo" class="logo">
+            <h1 class="site-title">NKORE DRUM</h1>
+          </a>
+        </div>
+  
+        <!-- Navigation Section -->
+        <nav class="main-nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="news.html" class="nav-link">News</a></li>
+            
+            <!-- Sports Dropdown -->
+            <li class="dropdown">
+              <a href="sports.html" class="nav-link">Sports ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="sports-football.html">Football</a></li>
+                <li><a href="sports-athletics.html">Athletics</a></li>
+                <li><a href="sports-rugby.html">Rugby</a></li>
+                <li><a href="sports-basketball.html">Basketball</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="entertainment.html" class="nav-link">Entertainment</a></li>
+            <li><a href="education.html" class="nav-link">Education</a></li>
+            <li><a href="business.html" class="nav-link">Business</a></li>
+            
+            <!-- Culture Dropdown -->
+            <li class="dropdown">
+              <a href="culture.html" class="nav-link">Culture & Heritage ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="culture-history.html">History</a></li>
+                <li><a href="culture-traditions.html">Traditions</a></li>
+                <li><a href="culture-languages.html">Languages</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="contactus.html" class="nav-link">Contact</a></li>
+          </ul>
+  
+          <!-- Hamburger Menu for Mobile -->
+          <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+    <main>
+        <section>
+            <h2>Get In Touch</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nkore Drum. All rights reserved.</p>
+    </footer>
+
+          <!-- Load animations.js first -->
+  <script src="assets/js/animations.js"></script>
+  <!-- Load nav.js second -->
+  <script src="assets/js/nav.js"></script>
+  <!-- (Optional) main.js last -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

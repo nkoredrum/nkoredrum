@@ -1,111 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nkore Drum</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/main.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nkore Drum</title>
+  
+  <!-- SEO Meta Tags -->
 
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+-->
+  <!-- Google Fonts with Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets/images/logo.jpg" alt="Nkore Drum Logo" class="logo">
+    <header class="site-header">
+        <div class="container">
+          <div class="header-content">
+            <!-- Logo & Title Section -->
+            <div class="logo-title">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.jpg" alt="Nkore Drum Logo" class="logo">
+                <h1 class="site-title">NKORE DRUM</h1>
+              </a>
+            </div>
+      
+            <!-- Navigation Section -->
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                
+                <!-- Sports Dropdown -->
+                <li class="dropdown">
+                  <a href="sports.html" class="nav-link">Sports ▾</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="sports-football.html">Football</a></li>
+                    <li><a href="sports-athletics.html">Athletics</a></li>
+                    <li><a href="sports-rugby.html">Rugby</a></li>
+                    <li><a href="sports-basketball.html">Basketball</a></li>
+                  </ul>
+                </li>
+                
+                <li><a href="entertainment.html" class="nav-link">Entertainment</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="business.html" class="nav-link">Business</a></li>
+                
+                <!-- Culture Dropdown -->
+                <li class="dropdown">
+                  <a href="culture.html" class="nav-link">Culture & Heritage ▾</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="culture-history.html">History</a></li>
+                    <li><a href="culture-traditions.html">Traditions</a></li>
+                    <li><a href="culture-languages.html">Languages</a></li>
+                  </ul>
+                </li>
+                
+                <li><a href="contactus.html" class="nav-link">Contact</a></li>
+              </ul>
+      
+              <!-- Hamburger Menu for Mobile -->
+              <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </nav>
+          </div>
         </div>
-        <h1>NKORE DRUM</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog/">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <header class="hero">
-        <h1>Welcome to the Nkore Drum Blog</h1>
-        <p>Exploring the rich culture and traditions of the Nkore people.</p>
-    </header>
+      </header>
+      
+      
     
-    <main>
-        <section class="welcome-section section">
-            <h2>Welcome to Nkore Drum</h2>
-            <p>Your source for untold stories from Western Uganda. Explore our latest features, insights, and stories.</p>
-        </section>
-        <section class="featured-stories section">
-            <h3>Stories of Heritage</h3>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <img src="assets/images/ankolecattle.jpg" alt="Majestic Ankole Cattle" class="story-image">
-                    <h4>The Majesty of Ankole Cattle</h4>
-                    <p>Known for their grand horns and resilience, Ankole cattle are more than livestock—they’re a living symbol of pride and tradition.</p>
-                    <a href="stories/ankole-cattle.html" class="read-more">Read More</a>
-                </div>
-                <div class="story-card">
-                    <img src="assets/images/mbararamarathon.jpg" alt="Run" class="story-image">
-                    <h4>Mbarara City marathon</h4>
-                    <p>Gather for the most interesting marathon of the year so far</p>
-                    <a href="stories/mbararamarathon.html" class="read-more">Discover More</a>
-                </div>
-           
-            </div>
-        </section>
-        
-        <section class="testimonials section">
-            <h3>QUOTES</h3>
-            <blockquote>
-                "Nkore Drum brings stories that truly resonate with our heritage." - Jane Doe
-            </blockquote>
-            <blockquote>
-                "A platform that preserves and celebrates our culture." - John Smith
-            </blockquote>
-        </section>
-        <section class="upcoming-events section">
-            <h3>Upcoming Events</h3>
-            <ul>
-                <li><strong>Mbarara City Marathon</strong> - March 29 , 2025</li>
-                <li><strong>Cultural Gathering</strong> - February 15, 2025</li>
-            </ul>
-        </section>
-        <section class="newsletter-signup">
-            <h3>Stay Updated</h3>
-            <p>Subscribe to our newsletter to receive the latest stories and updates.</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-        <section class="popular-articles section">
-            <h3>Popular Articles</h3>
-            <ul>
-                <li><a href="#">The History of Nkore Kingdom</a></li>
-                <li><a href="#">Traditional Dances of Western Uganda</a></li>
-                <li><a href="#">The Role of Folklore in Modern Times</a></li>
-            </ul>
-        </section>
-        <section class="photo-gallery section">
-            <h3>Photo Gallery</h3>
-            <div class="gallery-grid">
-                <img src="assets/images/pic1.jpg" alt="Gallery Image 1">
-                <img src="assets/images/mbararamarathon.jpg" alt="Gallery Image 2">
-                <img src="assets/images/mbararamarathon.jpg" alt="Gallery Image 3">
-            </div>
-        </section>
-        <section class="call-to-action section">
-            <h3>Contribute Your Story</h3>
-            <p>We'd love to hear from you. Share your stories with Nkore Drum and be part of preserving our heritage.</p>
-            <a href="mailto:contact@nkoredrum.com" class="cta-button">Submit Your Story</a>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-links">
-            <a href="#">Facebook</a> |
-            <a href="#">Twitter</a> |
-            <a href="#">Instagram</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to the Nkore Drum Blog</h1>
+            <p>Exploring the rich culture and traditions of the Nkore people.</p>
         </div>
-        <p>&copy; 2025 Nkore Drum. All rights reserved.</p>
+    </section>
+
+    <!-- Main Content Area with Sidebar -->
+    <main>
+        <div class="container">
+            <!-- Main Content Section -->
+            <section class="main-content">
+                <!-- Featured Stories Section -->
+                <section class="featured-stories">
+                    <h2>Featured Stories</h2>
+                    <div id="story-cards">
+                        <div class="story-card">
+                            <img src="assets/images/ankolecattle.jpeg" alt="The Majesty of Ankole Cattle">
+                            <h4>The Majesty of Ankole Cattle</h4>
+                            <p>Known for their grand horns and resilience, Ankole cattle are more than livestock—they’re a living symbol of pride and tradition.</p>
+                            <a href="blog/ankole-cattle.html" class="read-more">Read More</a>
+                        </div>
+                        <div class="story-card">
+                            <img src="assets/images/mbararamarathon.jpg" alt="The Mbarara Marathon">
+                            <h4>The Mbarara Marathon: A Cultural Celebration</h4>
+                            <p>An in-depth look at the marathon that brings the community together.</p>
+                            <a href="blog/mbarara-marathon.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Testimonials Section -->
+                <section class="testimonials section">
+                    <h3>QUOTES</h3>
+                    <blockquote>
+                        "Nkore Drum brings stories that truly resonate with our heritage." - Jane Doe
+                    </blockquote>
+                    <blockquote>
+                        "A platform that preserves and celebrates our culture." - John Smith
+                    </blockquote>
+                </section>
+                
+                <!-- Upcoming Events Section -->
+                <section class="upcoming-events section">
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                        <li><strong>Mbarara City Marathon</strong> - March 29, 2025</li>
+                        <li><strong>Cultural Gathering</strong> - February 15, 2025</li>
+                    </ul>
+                </section>
+                
+                <!-- Newsletter Signup Section -->
+                <section class="newsletter-signup">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter to receive the latest stories and updates.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </section>
+                
+                <!-- Popular Articles Section -->
+                <section class="popular-articles section">
+                    <h3>Popular Articles</h3>
+                    <ul>
+                        <li><a href="#">The History of Nkore Kingdom</a></li>
+                        <li><a href="#">Traditional Dances of Western Uganda</a></li>
+                        <li><a href="#">The Role of Folklore in Modern Times</a></li>
+                    </ul>
+                </section>
+                
+                <!-- Photo Gallery Section -->
+                <section class="photo-gallery section">
+                    <h3>Photo Gallery</h3>
+                    <div class="gallery-grid">
+                        <img src="assets/images/pic1.jpg" alt="Gallery Image 1">
+                        <img src="assets/images/mbararamarathon.jpg" alt="Gallery Image 2">
+                        <img src="assets/images/mbararamarathon.jpg" alt="Gallery Image 3">
+                    </div>
+                </section>
+                
+                <!-- Call-to-Action Section -->
+                <section class="call-to-action section">
+                    <h3>Contribute Your Story</h3>
+                    <p>We'd love to hear from you. Share your stories with Nkore Drum and be part of preserving our heritage.</p>
+                    <a href="mailto:nkoredrum@gmail.com" class="cta-button">Submit Your Story</a>
+                </section>
+            </section>
+            
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <h3>About Nkore Drum</h3>
+                <p>
+                    Nkore Drum is dedicated to sharing the rich cultural heritage and untold stories from Western Uganda.
+                </p>
+                <h3>Recent Posts</h3>
+                <ul class="recent-posts">
+                    <li><a href="blog/post1.html">The Majesty of Ankole Cattle</a></li>
+                    <li><a href="blog/post2.html">Mbarara Marathon Insights</a></li>
+                    <li><a href="blog/post3.html">Cultural Gatherings Unveiled</a></li>
+                </ul>
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </aside>
+        </div> <!-- end container -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </div>
+            <p>&copy; 2025 Nkore Drum. All rights reserved.</p>
+        </div>
     </footer>
+
+      <!-- Load animations.js first -->
+  <script src="assets/js/animations.js"></script>
+  <!-- Load nav.js second -->
+  <script src="assets/js/nav.js"></script>
+  <!-- (Optional) main.js last -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
